@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_landmarks"
+                android:title="@string/title_landmarks"
+            />
+        <item
+            android:id="@+id/nav_eatery"
+            android:title="@string/title_eatery" />
+        <item
+            android:id="@+id/nav_shopping"
+            android:title="@string/title_shopping" />
+        <item
+            android:id="@+id/nav_excursions"
+            android:title="@string/title_excursions" />
+        <item
+            android:id="@+id/nav_about_city"
+            android:title="@string/title_about_city" />
+        <item
+            android:id="@+id/nav_history"
+            android:title="@string/title_city_history" />
+        <item
+            android:id="@+id/nav_culture"
+            android:title="@string/title_city_culture" />
+        <item
+            android:id="@+id/nav_how_to_reach"
+            android:title="@string/title_how_to_reach" />
+    </group>
+</menu>

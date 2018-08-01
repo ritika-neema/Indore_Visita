@@ -1,0 +1,426 @@
+<resources>
+    <string name="app_name">Indore Visita</string>
+
+    <!--Strings used for onNavigationItemSelected-->
+    <string name="title_landmarks">City Landmarks</string>
+    <string name="title_eatery">City Eateries</string>
+    <string name="title_shopping">City Shopping Centres</string>
+    <string name="title_excursions">Excursions</string>
+    <string name="title_about_city">About City</string>
+    <string name="title_city_history">City History</string>
+    <string name="title_city_culture">City Culture</string>
+    <string name="title_how_to_reach">How to reach</string>
+
+
+    <!--Strings used for onNavigationItemSelected-->
+
+    <string name="about_city">The beautiful city of Indore in Madhya Pradesh state of <b>India</b>
+        is located on the banks of the River Khan and Sarawati and is known for its architectural
+        splendor in the form of monuments, palaces, and forts.
+        \nIndore is a home to many industries, like automobile, textile, IT, and it gives ample
+        of scopes to students and businessmens to find work opportunities in the city. The city
+        have emerged as commercial capital and IT hub of Madhya Pradesh. The most famous institutes
+        and companies are IIM Indore, DAVV, TCS, Infosys, Yash Technology.
+        IIT Indore and Crystal IT Park are part of the great educational and
+        technology center of Indore.
+        \nThe city is famous for its food, festival, and handicrafts that give tourists a wide
+        opportunity to spend quality time with family and friends and relish their holidays in the
+        heart of India i.e. Madhya Pradesh.</string>
+
+    <string name="city_history">The history of Indore is a tale of strife between the Mughals,
+        Marathas and the British who were struggling to gain dominance of central India.
+        According to the records, it was one Rao Nandlal Chaudhary who founded the city of Indore.
+        When the Marathas came into power, they lost the third Battle of Panipath to Ahmad Shah
+        Abdali, an Afghan invader. After that, they became powerless to resist the British and had
+        to sue for peace. Under these terms, the Holkars became the rulers of Indore.
+        \nMaharaja Malhar Rao Holkar was the founder of the Holkar dynasty. He was one of the
+        greatest statesmen an warrior of his times. Indore remained as a part of the Holkar
+        princedom during the British Raj. During the independence of India, it joined with a
+        number of neighbouring princely states and became a part of Madhya Bharat. The latter
+        was merged into Madhya Pradesh on November 1, 1956. </string>
+
+    <string name="city_culture">The cultural heritage of Indore includes magnificent remains of its
+        glorious past, soulful religious places and beautiful surroundings. Indore culture is a
+        unique blend of various cultures from across the country and makes it a perfect destination
+        to be explored. You will be enthralled to see the royalty and the simplicity of the city.
+        It is known for its food and festivals and welcomes the visitors with warmth.\n Indore
+        presents a good example of unity in diversity with major population of Hindus, sizeable
+        minorities of Muslims, Janis, Christians and sikhs and Buddhists.There are a number
+        of migrants in the city from different parts of nation too.
+        \n The city has a true cosmopolitan nature. You will find people belonging to different
+        cultural backgrounds and speaking varied languages. The major languages spoken in Indore
+        are Hindi, Marathi, English, Rajasthani, Malwi, Punjabi and Sindhi.</string>
+
+    <string name="how_to_reach"><b>By Air:</b> Indore is conveniently located in the center of
+        India, making it easily accessible from all the major cities like Bhopal, Gwalior,
+        Ahmedabad, Hyderabad, Kolkata, Nagpur, Jaipur, Raipur, Delhi and Mumbai. Indore airport is
+        just 8 km away from the city and one can hire a prepaid taxi or even take a bus from the
+        airport to reach hotel.
+        \n<b>By Rail:</b> Indore railway station is connected through Ratlam division of the
+        western railway and is accessible from the major citities in India including Mumbai, Pune,
+        Nagpur, Delhi, Jaipur, Ahmedabad, and Vadodra.
+        \n<b>By Road:</b> Indore is well connected to other cities of the state through state and
+        national highways. Regular bus service is available from cities like Bhopal, Gwalior,
+        Ujjain, and Sanchi to reach Indore</string>
+
+    <!--Strings used for venue details-->
+
+    <!--Strings used for landmarks details-->
+
+    <string name="landmark1_title">Rajawada</string>
+    <string name="landmark1_description">Synonymous with the heart of Indore city, it stands
+        today as a mute witness to the bygone splendour of the Holkar rulers. This 200 year old
+        seven-story historic palace of the Holkars is built in a mixture of Muslim, Maratha
+        and French styles. The lower three floors are made of stone and the upper floors are
+        made of wood, which made it very vulnerable to destruction by fire. Rajwada was burnt
+        three times in its history; the last fire in 1984 took the greatest toll.Today only the
+        front facade remains. Recent renovations have recreated some of the old glory of this
+        beautiful palace.</string>
+    <string name="landmark1_location">Rajwada circle</string>
+    <string name="landmark1_fee">Indian Citizens – ₹ 10
+        \nForeign nationals – ₹ 250
+        \nVideography – ₹ 100
+        \nPhotography – ₹ 25</string>
+    <string name="landmark1_timing">10:00 am to 5:00 pm; closed on Mondays </string>
+    <string name="landmark1_maps">https://goo.gl/maps/kfjLuCqgjAr</string>
+
+    <string name="landmark2_title">Lal Baag Palace</string>
+    <string name="landmark2_description">One of the grandest monuments the Holkar dynasty left
+        Indore. A reflection of their taste, grandeur and lifestyle, its construction began in 1886
+        under Tukoji Rao Holkar II, and was carried out in three phases. The final phase was
+        completed in 1921 under Tukoji Rao Holkar III. Many royal receptions were held here.
+        It has a total area of 28 hectares, and at one time it had the reputation of having one
+        of the best rose gardens in the country.</string>
+    <string name="landmark2_location">Indira Nagar</string>
+    <string name="landmark2_fee">₹ 10</string>
+    <string name="landmark2_timing">10:00 am to 5:00 pm; closed on Mondays </string>
+    <string name="landmark2_maps">https://goo.gl/maps/xUwbG7um8SU2</string>
+
+    <string name="landmark3_title">Bada Ganpati</string>
+    <string name="landmark3_description"> This Hindu Temple was built in the year 1875. According
+        to the mythology, one of the residents of the city of Avantika or Ujjain dreamt of Lord
+        Ganesh in his sleep. So, he rose up on the next day and prepared for the enormous statue
+        of Lord Ganesha, so that the Lord blesses him.
+        Better known for its size than antiquity, this temple
+        houses perhaps the largest Ganesh idol in the world measuring 25 feet from crown to foot.
+        Created as a result of the dream of an Avantika (Ujjain) resident, Shri Dadhich,
+        it was built in 1875.</string>
+    <string name="landmark3_location">Malhar Gunj</string>
+    <string name="landmark3_timing">5:00 am to 12:00 pm and 4:00 pm to 8:00 pm, Daily</string>
+    <string name="landmark3_maps">https://goo.gl/maps/BLiYv9pS3tj</string>
+
+    <string name="landmark4_title">Kanch Mandir</string>
+    <string name="landmark4_description">This Jain temple is an architectural marvel in glass.
+        The walls, ceilings, floors, pillars and door knobs are entirely inlaid with glass.
+        Even paintings are done in glass. Atop is a special glass chamber which multiplies the
+        three statues of Lord Shantinath, Aadinath &amp; Mahavira installed there into an indefinite
+        number (said to be visible up to 24 times, corresponding to the 24 tirthankaras).</string>
+    <string name="landmark4_location">Hukumchand Marg, Itwaria Bazaar</string>
+    <string name="landmark4_timing">5:00 am to 12:00 pm and 4:00 pm to 8:00 pm , Daily</string>
+    <string name="landmark4_maps">https://goo.gl/maps/DwjZM5Jsf1M2</string>
+
+    <string name="landmark5_title">Gandhi Hall</string>
+    <string name="landmark5_description">Built in 1904 and originally named King Edwards Hall,
+        it was renamed Mahatma Gandhi Hall in 1948. Its architectural style is Indo-Gothic.
+        Made in Seoni stone, its domes and staples are a landmark of Indore today. It has a
+        four-faced clock tower in front, because of which it is locally known as Ghanta Ghar.
+        It is frequently the venue for the various book and painting exhibitions, fairs and
+        festivals held throughout the year. The building also has a library, a children\'s park
+        and a temple.</string>
+    <string name="landmark5_location">Indore GPO</string>
+    <string name="landmark5_timing">10 AM to 6 PM, Daily</string>
+    <string name="landmark5_maps">https://goo.gl/maps/gqkCkXN7gNT2</string>
+
+    <string name="landmark6_title">Annapurna Mandir</string>
+    <string name="landmark6_description">Prominent temple dedicated to the Hindu goddess of food
+        featuring an ornate gate &amp; elephant statues. </string>
+    <string name="landmark6_location">Kranti Kriplani Nagar</string>
+    <string name="landmark6_maps">https://goo.gl/maps/XxxXQ8VXB7K2</string>
+    <string name="landmark6_timings">07:00 AM to 08:00 PM, Daily</string>
+
+    <string name="landmark7_title">Krishnapura Chhatri</string>
+    <string name="landmark7_description">Krishnapura Chhatri are the tombs or cenotaphs erected in memory of
+        dead Holkar rulers and their family members. The Chhatris picturesquely poised on the Khan
+        river banks near Rajawada are incomparable in terms of Maratha architecture and sculpture
+        of their period. At Chhatri Baag is the main collection of tombs housed in two compounds.
+        Close by is the beautiful Bolia Sarkar's Chhatri constructed in 1858 AD in memory of Sardar
+        Chimnaji Appa Sahib Bolia.</string>
+    <string name="landmark7_location">Mahatma Gandhi Road</string>
+    <string name="landmark7_maps">https://goo.gl/maps/stgzapPqFio</string>
+    <string name="landmark7_timings">09:00 AM to 05:00 PM; closed on Sundays</string>
+
+    <string name="landmark8_title">Khajrana Ganesh Temple</string>
+    <string name="landmark8_description">Khajrana Ganesh Temple is a pilgrimage center in Indore,
+        dedicated to Lord Ganpanti. This Temple is built in 1735 by Rani Ahilya Bai Holkar.
+        The devotees circling around temple and tie a thread to pray Lord Ganesha for successfully
+        completion of his work. The idol was found in a well and in 1735, it was taken out from
+        the well and a temple was established in 1735 by Ahilyabai Holkar belonging to the Holkar
+        dynasty of the Maratha Empire. It is said that the ancient statue in the temple statue was
+        seen in a dream of a local Pandit Mangal Bhatt. After this dream, the queen Ahilya Bai
+        Holkar excavated and installed the idol from under the ground and installed it. From where
+        the statue was removed, there is a well, which is right in front of the temple.</string>
+    <string name="landmark8_location">Khajrana Rd, Ganeshpuri Colony</string>
+    <string name="landmark8_maps">https://goo.gl/maps/rkXnSmy4zyQ2</string>
+    <string name="landmark8_timings">5 AM to 8 PM</string>
+    <string name="landmark8_website">http://www.shreeganeshkhajrana.com/</string>
+
+    <string name="landmark9_title">Gomatgiri</string>
+    <string name="landmark9_description"> On the hill 10-12 km away from the heart of the city,
+        the Jain Samaj has constructed a 21 feet statue of Lord Gomateshwar, a replica of the
+        Bahubali statue of Shravanbelagola. Also built here are 24 marble temples with shilars
+        for each tirthankar. This place offers a breathtaking view of Indore city by night. </string>
+    <string name="landmark9_location">Nainod Village, Indore</string>
+    <string name="landmark9_maps">https://goo.gl/maps/RhCKVFC6wro</string>
+    <string name="landmark9_timings">6:00 AM to 12:00 PM and  2:00 PM to 7:00 PM</string>
+
+
+    <!--String resources for excursions-->
+
+    <string name="excursion1_title">Nakhrali Dhani Water Park</string>
+    <string name="excursion1_description">Nakhrali Dhani blends Rajasthani and Malwi culture and
+        presents before the visitors a never-ending charm and magnificence to imbibe them into
+        the celebration. It inculcates- traditional dance performances by
+        Rajasthani dancers, entertaining Puppet shows, Bullock Cart Rides, Camel ride, magic show,
+        Horse ride and indeed a sumptuous Rajasthani meal. The village resort also
+        includes- a clean and hygienic swimming pool, a dance zone and a separate dining hall with
+        low rise sittings and a affectionately served food.The mouth-watering cuisines served in
+        the large dining hall are a treat of lifetime. The royal welcome, humble serving of food in
+        the style of Manuhar and the blend of love and kinship into the served cuisine itself works
+        as the soul-satisfier.</string>
+    <string name="excursion1_location">Rau</string>
+    <string name="excursion1_maps">https://goo.gl/maps/pf8iGaqo4LT2</string>
+    <string name="excursion1_timing">11 AM to 11 PM</string>
+    <string name="excursion1_fee">Children with ht les than 3 ft - free
+    \nChildren with ht from 3 ft to 4 ft 3 in - ₹ 330
+    \nAdults - ₹ 490
+    \nWater Park charges - ₹ 110</string>
+    <string name="excursion1_website">http://www.nakhralidhani.com/</string>
+
+    <string name="excursion2_title">Regional Park</string>
+    <string name="excursion2_description">If you are the kind of a person who does not want to do
+        much then the regional park along the banks of Pipliapala Lake is going to be your thing.
+        There are beautiful gardens, Mughal Garden, French Garden in the premises of Pipliyapala
+        Regional Park Indore which add to the beauty of the already mesmerizing place. There is
+        also an open amphi theatre which is a site for many theatrical activities for the pleasure
+        of the visitors here. The beautiful lake at Pipliyapala Regional Park is fitted with
+        a couple of jet fountains and lights which make it a sight not to be missed in the night.
+        A perfect spot for a little picnic for that ultimate Kodak Moment. There are plans of
+        getting boating facility, a children park and a food court to the table for a wholesome
+        experience for the visitors in the near future.</string>
+    <string name="excursion2_location">Rajiv Gandhi Circle</string>
+    <string name="excursion2_maps">https://goo.gl/maps/aHgwcwt7V6S2</string>
+    <string name="excursion2_fee">Adults - ₹ 25
+    \nChildren - ₹ 10</string>
+    <string name="excursion2_timings">8 AM to 10 PM</string>
+
+    <string name="excursion3_title">Tincha Waterfalls</string>
+    <string name="excursion3_description">Tincha Falls, is an ideal weekend getaway. The water
+        drips from a height of about 300 ft and it facilitates for bathing in the river upstream.
+        The exhuberent and spectacular waterfall has a pond nearby, which enhances the beauty of
+        the place. Its a sight to behold especially in the monsoons when it is in full and furious
+        flow. From a distance, the waterfall appears like streams of milk rushing down the
+        mountainside.There is also a couple of pools because of the cascading water everywhere
+        that you can swim in, making Tincha Falls a great place for a day full of fun and
+        frolic.</string>
+    <string name="excursion3_location">Berchha Village, 24km from Indore</string>
+    <string name="excursion3_maps">https://goo.gl/maps/PJ4gAVQhkaB2</string>
+
+    <string name="excursion4_title">Choral Dam</string>
+    <string name="excursion4_description">Choral Dam and the lake formed in front is another great
+        place to visit on a short trip. For those looking to get away from the busy city life and
+        enjoy nature in close quarters, this is the place to be. Great views and a beautiful
+        waterfall here will definitely leave you feeling refreshed. If you are looking for some
+        activity during your visit, you can also choose to go on a boat ride; speed and paddle
+        boats are available for hire.</string>
+    <string name="excursion4_location">Rampuria, 24 km from Indore</string>
+    <string name="excursion4_maps">https://goo.gl/maps/w2phv7R58zm</string>
+
+    <string name="excursion5_title">Crescent Water Park</string>
+    <string name="excursion5_description">Water is filled with thrilling rides and water
+        sports. Enjoy a fun filled day with your family and friends at this place with its water
+        park,amusement park and restaurant.</string>
+    <string name="excursion5_location">Near Devguradia, Khurd Kapmle Road, Indore</string>
+    <string name="excursion5_maps">https://goo.gl/maps/DKKKFKMbH7k</string>
+    <string name="excursion5_timings">10:00 AM to 06:00 PM</string>
+    <string name="excursion5_website">http://www.crescentwaterpark.in/</string>
+
+    <string name="excursion6_title">Patalpani Waterfalls</string>
+    <string name="excursion6_description">The Patalpani Waterfall is located in Mhow Tehsil of
+        Indore district in the state of Madhya Pradesh, India. The waterfall is
+        approximately 300 feet high. The area around Patalpani is a popular picnic and trekking
+        spot. The water flow is highest immediately after the rainy season (usually after July).
+        It goes almost dry in the summer season, and the stream is reduced to a trickle.</string>
+    <string name="excursion6_location">Kekariya Dabri, 33 km from Indore</string>
+    <string name="excursion6_maps">https://goo.gl/maps/BjvAc6SxiTA2</string>
+
+
+    <!--String resources for eateries-->
+
+    <string name="eatery1_title">Sarafa</string>
+    <string name="eatery1_description">No one knows about the exact origins of this bazar, and if
+        stories are to be believed, jewelry store owners in the locality encouraged the bazaar
+        by giving stall owners space in front of their shops so as to secure their shops at night.
+        What an innovative idea, right?
+        \nIt is a jewelry market during daytime, but when darkness falls, the place turns into a
+        food street with a mouth-watering range of items. This marketplace has a lot to offer
+        in terms of food as well as nightlife, making Sarafa Bazar extremely popular among locals
+        as well as tourists. This is one of the greatest places to visit in Indore with friends,
+        and you all can try out some very interesting items like Poha, Jalebis, Khichadi,
+        Malpua…the list goes on and on! Another factor making this place a must-visit is that it is
+        hardly a kilometer away from the city center.</string>
+    <string name="eatery1_location">Bada Sarafa Market</string>
+    <string name="eatery1_maps">https://goo.gl/maps/Rn1mqYcsBEr</string>
+    <string name="eatery1_fee">Bhutte Ka Kees, Ratalu, Rabri, Kulfi, Khopra Patties, Jalebi,
+        Garadu, and Poha-Jalebi (also known as Indori Poha)</string>
+    <string name="eatery1_timings">After 8:00 PM to 4:00 AM</string>
+
+    <string name="eatery2_title">Chappan Dukaan</string>
+    <string name="eatery2_description">Are you a foodie? Do you like to try out new dishes?
+        Does the very thought of delicious treats makes your mouth water? Then Chappan Dukan,
+        which is located around 4.5 km from the city center, is the perfect place to go to
+        when you are in Indore. Chappan Dukan is a Hindi name, which translates into ’56 shops’.
+        True to its name, this was once a place with 56 individual shops. However, today you can
+        find here a wide variety of food stalls, all buzzing with diners. The atmosphere here is
+        lively and it is among the perfect places to visit in Indore at night. Imagine taking food
+        trip through a street full of eateries, each offering something delicious to tickle your
+        taste buds. </string>
+    <string name="eatery2_location">56 Dukan St, New Palasia</string>
+    <string name="eatery2_maps">https://goo.gl/maps/PYLouns6mZP2</string>
+    <string name="eatery2_fee">Khopra Patties, Paani Puri, Dahi Puri, Egg Rolls, Mutton Burgers,
+        Momos, Poha, Kachori, Paan and Gond Ke Laddu</string>
+
+    <string name="eatery3_title">Hotel Shreemaya</string>
+    <string name="eatery3_description">A classic experience of fine taste, quality food and over
+        three decades of committed hospitality. Discover comfort &amp; convenience with intimate
+        and warm hospitality, professional services, fine quality food and true value
+        for money.</string>
+    <string name="eatery3_location">R N T Marg</string>
+    <string name="eatery3_maps">https://goo.gl/maps/mjsEMmkBMKt</string>
+    <string name="eatery3_website">http://www.shreemaya.com/</string>
+
+    <string name="eatery4_title">Shreemaya Celebration</string>
+    <string name="eatery4_description">The Bakery &amp; Coffee Shop was established in 2007. Nestled in
+        the mid of greenery, its refreshingly energizing atmosphere is our pride &amp; asset. Relish a
+        wide variety of Breads, Cookies, Cakes, Chocolates, Pastries, Mocktails, Quick Snacks &amp;
+        more..in a truly open &amp; peaceful location with spectacle of greenery.Kids areas is an
+        add on lucration. Various play equipments like the climbing nets, slides,
+        see-saw etc...have been placed, keeping our little guests engaged.</string>
+    <string name="eatery4_location">Rajendra Nagar</string>
+    <string name="eatery4_maps">https://goo.gl/maps/5Wtc2U2YvwH2</string>
+    <string name="eatery4_timings">11:00 AM to 10:15 PM</string>
+    <string name="eatery4_website">http://www.shreemaya.com</string>
+
+    <string name="eatery5_title">Go Bananas - Sayaji Hotel</string>
+    <string name="eatery5_description">When you want to enjoy time with friends and family while
+        playing some indoor sports, Go Bananas at hotel Sayaji is the place to be at !! Get
+        competitive in a bowling game at Indore\'s first Bowling Alley, which is also India\'s
+        very first fully-automated Bowling Alley !! Or challenge friends over pocketing balls
+        on a pool-table !! You may also bet your luck at the virtual games here !!
+        And get kids to dash cars - bumper cars !!
+        Do all this while enjoying good, peppy music and snacks, meals,
+        alcoholic and non-alcoholic beverages, bakery products, and desserts here,
+        all by hotel Sayaji !!</string>
+    <string name="eatery5_location">Vijay Nagar</string>
+    <string name="eatery5_maps">https://goo.gl/maps/j6tGU3itCCG2</string>
+    <string name="eatery5_timings">11 AM to 12 AM</string>
+    <string name="eatery5_website">sayajihotels.com</string>
+
+    <string name="eatery6_title">Mug and Beans</string>
+    <string name="eatery6_description">A highly-rated joint to enjoy a quick break with your
+        colleagues. It serves a wide array of items from Fast Food, Italian cuisines and is
+        quite well-known for its unique selection of dishes.</string>
+    <string name="eatery6_location">Rajendra Nagar</string>
+    <string name="eatery6_maps">https://goo.gl/maps/5hqk15ZmZRJ2</string>
+    <string name="eatery6_timings">10 AM to 11 PM</string>
+
+    <string name="eatery7_title">Indian Coffee House</string>
+    <string name="eatery7_description">The Indian Coffee House has a long history !!
+        In the pre-independence era, Government of India set up the Coffee Board, under the
+        British rule, to promote drinking of coffee and sale of coffee seeds by farmers !!
+        Post independence, the workers formed the co-operative societies in different states of
+        India and renamed the network as INDIAN COFFEE HOUSE !! The first Indian Coffee House was
+        opened in New Delhi on October 27, 1957 !! This is a very popular Indian style café serving
+        South-Indian cuisine, snacks, meals, South Indian coffee, and much more, while being
+        very friendly to the pocket !! Indian and Chinese main course dishes, rice dishes, and even
+        salads can be ordered here either in full portions or half portions (remember the
+        student budgets?) !! This is a great option when you are alone or when the two of you
+        don't want to order the same dish, and taste various delicacies !! They have a mini
+        thaali too !!</string>
+    <string name="eatery7_location">Bhanwar kuwa, DAVV Takshila Parisar</string>
+    <string name="eatery7_maps">https://goo.gl/maps/7p9sEpXggq82</string>
+    <string name="eatery7_timings">10 AM to 9 PM</string>
+
+
+    <!--String resources for shopping spots-->
+
+    <string name="shopping1_title">MT Cloth Market</string>
+    <string name="shopping1_description">If you want to buy the speciality of the beautiful city of
+        Indore, handloom, then  MT Cloth Market is going to be a place for you. Treat yourself
+        with buying clothing in wholesale at reasonable prices. Bargaining here will play an
+        important role if you are actually buying the cloth in large quantities. If you are not
+        really aware of the different kinds of cloth then don\'t worry because the shopkeepers
+        here are like your ultimate guide for the same. They will guide you, advice you and will
+        make sure that you at least leave their shop with four to five shopping bags.</string>
+    <string name="shopping1_location">Maharaja Tukoji Rao Holker Cloth Market</string>
+    <string name="shopping1_maps">https://goo.gl/maps/qkAJNjmxiVG2</string>
+    <string name="shopping1_timings">10:00 AM to 08:30 PM</string>
+
+    <string name="shopping2_title">Sitlamata Bazar</string>
+    <string name="shopping2_description">One of the most famous bazaars in the city, Sitlamata
+        Bazar is famous for its several stores selling retail clothing and sarees. The place is
+        bustling with people all the time and you might find it hard to shop at times in this
+        market. You will get the best sarees, be it Chanderi or Maheshwari, in the city to every
+        woman’s pleasure. If you are soon to be bride, then this place is also amazing. Order for a
+        lehenga chunri which will be made with the most awesome zaris and embroidery work. </string>
+    <string name="shopping2_location">Maharaja Tukoji Rao Holker Cloth Market</string>
+    <string name="shopping2_maps">https://goo.gl/maps/KA52T9omoTp</string>
+    <string name="shopping2_timings">10:00 AM to 8:00 PM</string>
+
+    <string name="shopping3_title">Treasure Island</string>
+    <string name="shopping3_description">The highlights of Treasure Island are MAX, PVR,
+        McDonald\'s, and Pizza Hut. MAX Retail, a division of Lifestyle International is the most
+        famous fashion retail destination in the city. The USP of the store is its wide range of
+        fashionable offering at a cost which suits everyone\'s pocket, specially youth. This store
+        is also famous for being the 1st retail store in India by the renowned Landmark group.
+        Treasure Island is comparable to the malls found in Noida and Gurgaon. Equipped with state
+        of the art escalators and housed by showrooms of all leading brands, it\'s the bes
+        t hangout in Indore (and most probably in the whole MP). It also has two Baristas
+        (coffee shop) and a Rajdhani (a thali (buffet) restaurant).</string>
+    <string name="shopping3_location">South Tukoganj, MG Road</string>
+    <string name="shopping3_maps">https://goo.gl/maps/hZf795Bgspy</string>
+    <string name="shopping3_timings">09:00 AM to 10:00 PM</string>
+
+    <string name="shopping4_title">Mrignayani Showroom</string>
+    <string name="shopping4_description">Located behind Gujarati Girl\'s college, Mrignayani
+        Showroom is the MP government\'s exclusive handicraft store which serves you with a wide
+        variety of artefacts that the city\’s creativity has in store. Do not forget to buy hand
+        crafted leather toys and other handicraft items such as bangles, show pieces and other
+        decorative pieces. Haggling over prices is not going to save you from spending here as it
+        is a government run showroom. But don\'t worry, you are not going to repent spending even
+        a penny out here. </string>
+    <string name="shopping4_location">Mahatma Gandhi Road</string>
+    <string name="shopping4_maps">https://goo.gl/maps/qGGZ73MPjBA2</string>
+    <string name="shopping4_timings">11:00 AM to 8:30 PM</string>
+    <string name="shopping4_website">http://wwww.mrignayani.com</string>
+
+    <string name="shopping5_title">C21 Mall</string>
+    <string name="shopping5_description">Another Good Mall on AB Road having exclusive shops of
+        many international brands like Tommy Hilfiger, Madame,Wills, Arrow, Calvin Klein, United
+        Colors of Benneton, Fastrack, Adidas, Nike, Levis, Monte Carlo, French Connection (FCUK)
+        and indian brands like Biba, Ritu wears' Biglife etc It also accomodates Satyam Cineplex,
+        CCD, and a 4D theatre named Storm.</string>
+    <string name="shopping5_location">Scheme No.54, Vijay Nagar </string>
+    <string name="shopping5_timings">10:00 AM to 9:30 PM</string>
+    <string name="shopping5_website">http://www.c21malls.co.in</string>
+    <string name="shopping5_maps">https://goo.gl/maps/FifpNniR6Vs</string>
+
+    <string name="shopping6_title">Shoppers Stop</string>
+    <string name="shopping6_description">A famous elite shopping store in India which sells a blend
+        of a lot of famous brands. An expensive store but very reliable in the sense of quality.
+        Cheaper for the tourists and non-residents since its got a better prices than overseas. </string>
+    <string name="shopping6_location">LIG gurudwara, A.B. Road</string>
+    <string name="shopping6_maps">https://goo.gl/maps/VVKF9w3dT4x</string>
+    <string name="shopping6_timings">11 AM to 9 PM</string>
+    <string name="shopping6_website">http://www.shoppersstop.com</string>
+
+</resources>
