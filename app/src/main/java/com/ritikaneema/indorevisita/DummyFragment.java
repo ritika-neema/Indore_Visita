@@ -31,7 +31,7 @@ public class DummyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.fragment_dummy, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_tabs, container, false);
 
         VenuesDatabase.clear();
 

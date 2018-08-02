@@ -22,7 +22,6 @@ import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -42,6 +41,37 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         setContentView(R.layout.activity_main);
 
+        setupNavigationView();
+
+        setUpTabs();
+
+        try {
+            Bundle bundle = getIntent().getExtras();
+            int fragment = Integer.valueOf(bundle.getString("FRAGMENT"));
+            setRequestedFragment(fragment);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        tryDynamicBarColor();
+
+    }
+
+    private void setRequestedFragment(int fragNumber) {
+        switch (fragNumber) {
+            case 0:
+                viewPager.setCurrentItem(0);
+                break;
+            case 1:
+                viewPager.setCurrentItem(1);
+                break;
+            case 2:
+                viewPager.setCurrentItem(2);
+                break;
+        }
+    }
+
+    private void setupNavigationView() {
         //changing toolbar to actionbar and setting hamburger menu icon up top
         final Toolbar toolbar = findViewById(R.id.htab_toolbar);
         setSupportActionBar(toolbar);
@@ -62,10 +92,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        setUpTabs();
-
-        tryDynamicBarColor();
 
     }
 
@@ -100,14 +126,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void onGenerated(Palette palette) {
 
-                    mutedColor = palette.getMutedColor(R.color.primary_500);
-                    int darkMutedColor = palette.getDarkMutedColor(R.color.primary_700);
-                    int vibrantColor = palette.getVibrantColor(R.color.primary_500);
-                    int vibrantDarkColor = palette.getDarkVibrantColor(R.color.primary_700);
+                    mutedColor = palette.getMutedColor(R.color.colorPrimary);
+                    int darkMutedColor = palette.getDarkMutedColor(R.color.colorPrimaryDark);
+
+                    int vibrantColor = palette.getVibrantColor(R.color.colorPrimary);
+                    int vibrantDarkColor = palette.getDarkVibrantColor(R.color.colorPrimaryDark);
+
                     collapsingToolbarLayout.setContentScrimColor(mutedColor);
                     collapsingToolbarLayout.setStatusBarScrimColor(darkMutedColor);
+
+                    collapsingToolbarLayout.setFitsSystemWindows(true);
+
                     View header = navigationView.getHeaderView(0);
-                    navHeader = (LinearLayout) header.findViewById(R.id.nav_header);
+                    navHeader = header.findViewById(R.id.nav_header);
                     navHeader.setBackgroundColor(mutedColor);
 
                 }
@@ -117,10 +148,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             // if Bitmap fetch fails, fallback to primary colors
             Log.e("LOG", "onCreate: failed to create bitmap from background", e.fillInStackTrace());
             collapsingToolbarLayout.setContentScrimColor(
-                    ContextCompat.getColor(this, R.color.primary_500)
+                    ContextCompat.getColor(this, R.color.colorPrimary)
             );
             collapsingToolbarLayout.setStatusBarScrimColor(
-                    ContextCompat.getColor(this, R.color.primary_700)
+                    ContextCompat.getColor(this, R.color.colorPrimaryDark)
             );
         }
     }
@@ -170,14 +201,4 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) { Log.d("ONACTIVTY","watever, got here");
-        super.onActivityResult(requestCode, resultCode, data);
-        Toast.makeText(MainActivity.this,"gerg",Toast.LENGTH_SHORT).show();
-        if (requestCode == 2) {
-            if (resultCode == RESULT_OK) {
-
-            }
-        }
-    }
 }

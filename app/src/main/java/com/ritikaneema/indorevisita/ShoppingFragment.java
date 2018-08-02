@@ -19,7 +19,7 @@ public class ShoppingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.fragment_dummy, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_tabs, container, false);
 
         shoppingList.clear();
 

@@ -1,6 +1,5 @@
 package com.ritikaneema.indorevisita;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -25,11 +24,11 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
     DrawerLayout navDrawer;
     NavigationView navigationView;
     Intent resultIntent;
+    Bundle bundle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         final int navItem = Integer.parseInt(getIntent().getStringExtra("NAV_ITEM"));
 
         setContentView(R.layout.activity_navigation);
@@ -73,6 +72,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
 
         final Toolbar toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
+
         ActionBar actionbar = getSupportActionBar();
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
@@ -84,7 +84,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         navigationView.setNavigationItemSelectedListener(this);
 
         View header = navigationView.getHeaderView(0);
-        LinearLayout navHeader = (LinearLayout) header.findViewById(R.id.nav_header);
+        LinearLayout navHeader = header.findViewById(R.id.nav_header);
         navHeader.setBackgroundColor(mutedColor);
 
         //create default navigation drawer toggle
@@ -96,7 +96,8 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
     }
 
     public void setResultIntent() {
-        startActivityForResult(resultIntent, 2);
+        resultIntent.putExtras(bundle);
+        startActivity(resultIntent);
     }
 
     @Override
@@ -105,18 +106,19 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         int id = item.getItemId();
 
         resultIntent = new Intent(NavigationActivity.this, MainActivity.class);
+        bundle = new Bundle();
 
         if (id == R.id.nav_landmarks) {
-            resultIntent.putExtra("FRAGMENT", "0");
+            bundle.putString("FRAGMENT", "0");
             setResultIntent();
         } else if (id == R.id.nav_eatery) {
-            resultIntent.putExtra("FRAGMENT", "1");
+            bundle.putString("FRAGMENT", "1");
             setResultIntent();
         } else if (id == R.id.nav_shopping) {
-            resultIntent.putExtra("FRAGMENT", "2");
+            bundle.putString("FRAGMENT", "2");
             setResultIntent();
         } else if (id == R.id.nav_excursions) {
-            resultIntent.putExtra("FRAGMENT", "3");
+            bundle.putString("FRAGMENT", "3");
             setResultIntent();
         } else if (id == R.id.nav_about_city) {
             heading.setText(R.string.title_about_city);
@@ -132,7 +134,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
             content.setText(R.string.how_to_reach);
         }
 
-        navDrawer = (DrawerLayout) findViewById(R.id.drawer_layout_nav);
+        navDrawer = findViewById(R.id.drawer_layout_nav);
         navDrawer.closeDrawer(Gravity.START);
         return true;
     }

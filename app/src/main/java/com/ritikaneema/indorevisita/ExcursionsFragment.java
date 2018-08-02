@@ -18,7 +18,7 @@ public class ExcursionsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View rootview = inflater.inflate(R.layout.fragment_dummy, container, false);
+        View rootview = inflater.inflate(R.layout.fragment_tabs, container, false);
 
         excursionsList.clear();
 
@@ -27,7 +27,7 @@ public class ExcursionsFragment extends Fragment {
                 getString(R.string.excursion1_location),
                 getString(R.string.excursion1_maps),
                getString(R.string.excursion1_timing),getString(R.string.excursion1_website),getString(R.string.excursion1_fee),
-                        R.drawable.nakhralii));
+                R.drawable.nakhrali));
 
         excursionsList.add(new Venue(getString(R.string.excursion2_title),
                 getString(R.string.excursion2_description),

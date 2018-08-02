@@ -1,6 +1,7 @@
 package com.ritikaneema.indorevisita;
 
 public class Venue {
+
     // Venue items
     private String mTitle;
     private String mDescription;
