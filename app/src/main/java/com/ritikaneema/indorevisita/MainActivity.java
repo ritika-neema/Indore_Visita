@@ -1,37 +1,28 @@
 package com.ritikaneema.indorevisita;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    static int mutedColor;
 
     TabLayout tabLayout;
     ViewPager viewPager;
     CollapsingToolbarLayout collapsingToolbarLayout;
     DrawerLayout navDrawer;
-    LinearLayout navHeader;
     NavigationView navigationView;
 
     @Override
@@ -53,8 +44,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             e.printStackTrace();
         }
 
-        tryDynamicBarColor();
 
+        collapsingToolbarLayout.setContentScrimColor(getResources().getColor(
+                R.color.colorPrimary
+        ));
+        collapsingToolbarLayout.setStatusBarScrimColor(
+                getResources().getColor(R.color.transparent_00));
+
+        collapsingToolbarLayout.setFitsSystemWindows(true);
     }
 
     private void setRequestedFragment(int fragNumber) {
@@ -72,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void setupNavigationView() {
+
         //changing toolbar to actionbar and setting hamburger menu icon up top
         final Toolbar toolbar = findViewById(R.id.htab_toolbar);
         setSupportActionBar(toolbar);
@@ -116,46 +114,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_shopping);
         tabLayout.getTabAt(3).setIcon(R.drawable.ic_excursions);
     }
-
-
-    private void tryDynamicBarColor() {
-        try {
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.chhatri_baug);
-            Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
-                @SuppressWarnings("ResourceType")
-                @Override
-                public void onGenerated(Palette palette) {
-
-                    mutedColor = palette.getMutedColor(R.color.colorPrimary);
-                    int darkMutedColor = palette.getDarkMutedColor(R.color.colorPrimaryDark);
-
-                    int vibrantColor = palette.getVibrantColor(R.color.colorPrimary);
-                    int vibrantDarkColor = palette.getDarkVibrantColor(R.color.colorPrimaryDark);
-
-                    collapsingToolbarLayout.setContentScrimColor(mutedColor);
-                    collapsingToolbarLayout.setStatusBarScrimColor(darkMutedColor);
-
-                    collapsingToolbarLayout.setFitsSystemWindows(true);
-
-                    View header = navigationView.getHeaderView(0);
-                    navHeader = header.findViewById(R.id.nav_header);
-                    navHeader.setBackgroundColor(mutedColor);
-
-                }
-            });
-
-        } catch (Exception e) {
-            // if Bitmap fetch fails, fallback to primary colors
-            Log.e("LOG", "onCreate: failed to create bitmap from background", e.fillInStackTrace());
-            collapsingToolbarLayout.setContentScrimColor(
-                    ContextCompat.getColor(this, R.color.colorPrimary)
-            );
-            collapsingToolbarLayout.setStatusBarScrimColor(
-                    ContextCompat.getColor(this, R.color.colorPrimaryDark)
-            );
-        }
-    }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

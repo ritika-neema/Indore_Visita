@@ -14,7 +14,7 @@
     tools:ignore="ContentDescription"
     android:clickable="true"
     android:focusable="true"
-    app:cardBackgroundColor="@color/colorPrimaryTextDefaultMaterialLight"
+    app:cardBackgroundColor="@color/cards_color"
     app:cardUseCompatPadding="true">
 
     <android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"

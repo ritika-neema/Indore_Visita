@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_landmarks"
-                android:title="@string/title_landmarks"
-            />
+            android:icon="@drawable/ic_landmarks"
+            android:title="@string/title_landmarks" />
         <item
             android:id="@+id/nav_eatery"
+            android:icon="@drawable/ic_eatery"
             android:title="@string/title_eatery" />
         <item
             android:id="@+id/nav_shopping"
+            android:icon="@drawable/ic_shopping"
             android:title="@string/title_shopping" />
         <item
             android:id="@+id/nav_excursions"
+            android:icon="@drawable/ic_excursions"
             android:title="@string/title_excursions" />
+    </group>
+
+
+    <group>
         <item
             android:id="@+id/nav_about_city"
             android:title="@string/title_about_city" />

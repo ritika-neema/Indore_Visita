@@ -1,9 +1,14 @@
 package com.ritikaneema.indorevisita;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,10 +17,26 @@ import android.widget.TextView;
 
 public class DetailsActivity extends AppCompatActivity {
 
+    CollapsingToolbarLayout collapsingToolbarLayout;
+
+    TextView selectedVenueLocationTextView, selectedVenueTimingTextView;
+    ImageView selectedVenueImageView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
+
+        setContentAndBehaviour();
+
+        collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
+
+        setupToolBar();
+
+
+    }
+
+    private void setContentAndBehaviour() {
 
         // Venue details BUNDLE from MainActivity
         final String venueTitle = getIntent().getStringExtra("VENUE_TITLE");
@@ -30,24 +51,18 @@ public class DetailsActivity extends AppCompatActivity {
         // Find the views for selected Venue
         TextView selectedVenueTitleTextView = findViewById(R.id.toolbar_title);
         TextView selectedVenueIntroTextView = findViewById(R.id.venue_description);
-        TextView selectedVenueVillageTextView = findViewById(R.id.venue_location_detail);
-        TextView selectedVenueVolcanoTextView = findViewById(R.id.venue_timing);
+        selectedVenueLocationTextView = findViewById(R.id.venue_location_detail);
+        selectedVenueTimingTextView = findViewById(R.id.venue_timing);
         TextView selectedVenueWebsiteTextView = findViewById(R.id.venue_website);
-        TextView selectedVenueFeaturesTextView = findViewById(R.id.venue_fee);
-        ImageView selectedVenueImageView = findViewById(R.id.backdrop);
+        TextView selectedVenueFeesTextView = findViewById(R.id.venue_fee);
+        selectedVenueImageView = findViewById(R.id.backdrop);
         ImageView selectedVenueMapImageView = findViewById(R.id.venue_map);
 
-        // Set the TextViews to the BUNDLE values for the selected Venue
-
+        // Set the TextViews for the selected Venue
         selectedVenueTitleTextView.setText(venueTitle);
-
         selectedVenueIntroTextView.setText(venueDescription);
-
-        selectedVenueVillageTextView.setText(venueLocation);
-
-
-        selectedVenueVolcanoTextView.setText(venueTiming);
-
+        selectedVenueLocationTextView.setText(venueLocation);
+        selectedVenueTimingTextView.setText(venueTiming);
 
         if (venueWebsite.equals("") || venueWebsite.equals("")) {
             selectedVenueWebsiteTextView.setVisibility(View.GONE);
@@ -56,12 +71,12 @@ public class DetailsActivity extends AppCompatActivity {
         }
 
         if (venueFee.equals("") || venueFee.equals("")) {
-            selectedVenueFeaturesTextView.setVisibility(View.GONE);
+            selectedVenueFeesTextView.setVisibility(View.GONE);
         } else {
-            selectedVenueFeaturesTextView.setText(venueFee);
+            selectedVenueFeesTextView.setText(venueFee);
         }
 
-        // Check if there is a url and display the map locator button if there is
+        // Check if there is a url and display the map button if there is
         if (venueMapUrl.equals("") || venueMapUrl.equals("")) {
             selectedVenueMapImageView.setVisibility(View.INVISIBLE);
         }
@@ -69,15 +84,7 @@ public class DetailsActivity extends AppCompatActivity {
         // Display the venue image
         selectedVenueImageView.setImageResource(venueImage);
 
-        // Set up the custom toolbar and back button
-        Toolbar toolbar = findViewById(R.id.main_toolbar);
-        setSupportActionBar(toolbar);
-
-        if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("");
-            getSupportActionBar().setHomeButtonEnabled(true);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        }
+        tryDynamicBarColor(venueImage);
 
         // Launch website in browser when url button is clicked
         findViewById(R.id.venue_website).setOnClickListener(new View.OnClickListener() {
@@ -93,7 +100,6 @@ public class DetailsActivity extends AppCompatActivity {
             }
         });
 
-
         // Launch maps when map button is clicked
         findViewById(R.id.venue_map).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +112,54 @@ public class DetailsActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void setupToolBar() {
+        // Set up the custom toolbar and back button
+        Toolbar toolbar = findViewById(R.id.main_toolbar);
+        setSupportActionBar(toolbar);
+
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+
+    }
+
+    private void tryDynamicBarColor(int imageId) {
+        try {
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), imageId);
+            Palette.from(bitmap).generate(new Palette.PaletteAsyncListener() {
+                @SuppressWarnings("ResourceType")
+                @Override
+                public void onGenerated(Palette palette) {
+
+                    int vibrantDarkColor = palette.getDarkVibrantColor(R.color.colorPrimaryDark);
+
+                    collapsingToolbarLayout.setContentScrimColor(vibrantDarkColor);
+                    collapsingToolbarLayout.setStatusBarScrimColor(
+                            getResources().getColor(R.color.transparent_00));
+
+                    collapsingToolbarLayout.setFitsSystemWindows(true);
+
+                    selectedVenueLocationTextView.setBackgroundColor(vibrantDarkColor);
+                    selectedVenueTimingTextView.setBackgroundColor(vibrantDarkColor);
+
+                }
+            });
+
+        } catch (Exception e) {
+
+            // if Bitmap fetch fails, fallback to primary colors
+            collapsingToolbarLayout.setContentScrimColor(
+                    ContextCompat.getColor(this, R.color.colorPrimary)
+            );
+            collapsingToolbarLayout.setStatusBarScrimColor(
+                    ContextCompat.getColor(this, R.color.colorPrimaryDark)
+            );
+
+        }
     }
 
     // Make the Up Button behave like a Back Button

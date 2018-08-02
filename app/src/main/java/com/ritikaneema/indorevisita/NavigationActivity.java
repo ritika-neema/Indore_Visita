@@ -3,6 +3,7 @@ package com.ritikaneema.indorevisita;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -13,10 +14,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import static com.ritikaneema.indorevisita.MainActivity.mutedColor;
 
 public class NavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -68,7 +67,7 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
 
     }
 
-    public void setNavigationView(){
+    public void setNavigationView() {
 
         final Toolbar toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
@@ -83,15 +82,17 @@ public class NavigationActivity extends AppCompatActivity implements NavigationV
         navigationView = findViewById(R.id.nav_view_drawer);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View header = navigationView.getHeaderView(0);
-        LinearLayout navHeader = header.findViewById(R.id.nav_header);
-        navHeader.setBackgroundColor(mutedColor);
-
         //create default navigation drawer toggle
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, navDrawer, toolbar,
                 R.string.app_name, R.string.appbar_scrolling_view_behavior);
         navDrawer.addDrawerListener(toggle);
         toggle.syncState();
+
+        CollapsingToolbarLayout collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
+
+        collapsingToolbarLayout.setStatusBarScrimColor(
+                getResources().getColor(R.color.transparent_00));
+
 
     }
 
