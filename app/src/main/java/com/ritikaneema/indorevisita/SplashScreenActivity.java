@@ -32,7 +32,7 @@ public class SplashScreenActivity extends Activity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
+        }, 4500);
     }
 
     private void startAnimation() {
@@ -42,14 +42,9 @@ public class SplashScreenActivity extends Activity {
         l.clearAnimation();
         l.startAnimation(anim);
 
-        anim = AnimationUtils.loadAnimation(this, R.anim.translate);
-        anim.reset();
         TextView textView = findViewById(R.id.logo);
-        textView.clearAnimation();
-        textView.startAnimation(anim);
 
         anim = AnimationUtils.loadAnimation(this, R.anim.rotate);
-        anim.reset();
         textView.clearAnimation();
         textView.startAnimation(anim);
     }
